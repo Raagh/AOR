@@ -33,10 +33,10 @@ VOID SendToServer(string message);
 //// Pointer Functions Declarations
 //
 typedef VOID(WINAPI *PRecvData)(BSTR data);    //Pointer Definition - Takes BSTR and returns VOID
-PRecvData PFunctionRecv = (PRecvData)0x492D90; //Pointer to where the original HandleData() starts
+PRecvData PFunctionRecv = (PRecvData)0x655B10; //Pointer to where the original HandleData() starts
 
 typedef VOID(WINAPI *PSendData)(BSTR* data);   //Pointer Definition - Takes BSTR* and returns VOID
-PSendData PFunctionSend = (PSendData)0x4D4480; //Pointer to where the original SendData() starts
+PSendData PFunctionSend = (PSendData)0x6A21C0; //Pointer to where the original SendData() starts
 
 typedef int(WINAPI *PLoop)();
 HMODULE dllModule = LoadLibraryA("MSVBVM60.DLL");							// The Address for the Loop Function.
